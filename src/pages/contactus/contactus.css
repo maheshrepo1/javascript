@@ -9,14 +9,14 @@
     text-align: center;
     border: 0px solid black;
 }
-
+    
 .tablediv {
   border: 0px solid rgb(169, 58, 58);
   float: left;  
   width: 50%;
   height: 60px;
-}
-
+} 
+ 
 .input {
     width: 100%;
     padding: 12px 20px;
