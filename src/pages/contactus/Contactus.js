@@ -9,7 +9,7 @@ export default function Contact(){
  const[counter,scounter] = useState(0);
  const[glastname,slastnmae] = useState({});
 
- let first_name_fun = (e)=>{
+ let first_name_f un = (e)=>{
       sfname(e.target.value);
       // set_form_data({...get_form_data,[name]:value});
  }
