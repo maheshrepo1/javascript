@@ -18,10 +18,7 @@ const Cart = ()=>{
                      <td>{item.color}</td>  
                      <td>{item.price}</td> 
                      <td>{item.brand}</td> 
-                    
                      </tr>
-
-
                )}
 
                </table>

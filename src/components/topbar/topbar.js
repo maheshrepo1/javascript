@@ -4,10 +4,11 @@ import  Contact from "../../pages/contactus/Contactus";
 import  About from  "../../pages/aboutus/Aboutus";
 import  User from  "../../pages/users/users";
 import  Cart from  "../../pages/cart/cart";
-
 import {useDispatch,useSelector} from 'react-redux';
 import { useEffect } from "react";
 import { articleList } from "../../redux/action/productAction";
+import  Fproduct  from "../../pages/fproduct/fproduct";
+import Mproduct from "../../pages/mproduct/mproduct";
  
 export default function Topbar()
 {  
@@ -60,6 +61,20 @@ export default function Topbar()
                     </div>
 
                     <div style={{ margin: '10px' }}>
+                        <NavLink to="/fproduct" style={({ isActive }) => ({ 
+                            color: isActive ? 'greenyellow' : 'white' })}>
+                             Feature Products
+                        </NavLink>
+                    </div>
+
+                    <div style={{ margin: '10px' }}>
+                        <NavLink to="/mproduct" style={({ isActive }) => ({ 
+                            color: isActive ? 'greenyellow' : 'white' })}>
+                             Member Products
+                        </NavLink>
+                    </div>
+
+                    <div style={{ margin: '10px' }}>
                         <NavLink to="/contact" style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'white' })}>
                             Contact Us.
@@ -71,6 +86,8 @@ export default function Topbar()
                     <Route exact path="/about" element={<About />} />
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/user" element={<User />} />
+                    <Route exact path="/fproduct" element={<Fproduct />} />
+                    <Route exact path="/mproduct" element={<Mproduct />} />
                     <Route exact path="/contact" element={<Contact />} />
                 </Routes>
             </BrowserRouter>
