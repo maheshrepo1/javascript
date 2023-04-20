@@ -1,0 +1,7 @@
+core.editor="C:\Users\Mahika\AppData\Local\Programs\Microsoft VS Code\Code.exe" --wait
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=maheshrepo1
+user.email=it_developer_mahesh@hotmail.com
