@@ -9,6 +9,12 @@ import { useEffect } from "react";
 import { articleList } from "../../redux/action/productAction";
 import  Fproduct  from "../../pages/fproduct/fproduct";
 import Mproduct from "../../pages/mproduct/mproduct";
+import Sproduct from "../../pages/searchproduct/sproduct";
+import Fproductdetail from "../../pages/fproductdetail/fproductdetail";
+//import Article from "../../pages/article/article";
+import Article from "../../pages/article/articletest";
+
+
  
 export default function Topbar()
 {  
@@ -39,6 +45,14 @@ export default function Topbar()
                             Home
                         </NavLink>
                     </div>
+
+                    <div style={{ margin: '10px' }}>
+                        <NavLink to="/article" style={({ isActive }) => ({ 
+                            color: isActive ? 'greenyellow' : 'white' })}>
+                            Article
+                        </NavLink>
+                    </div>
+                    
                     <div style={{ margin: '10px' }}>
                         <NavLink to="/about" style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'white' })}>
@@ -75,6 +89,13 @@ export default function Topbar()
                     </div>
 
                     <div style={{ margin: '10px' }}>
+                        <NavLink to="/sproduct" style={({ isActive }) => ({ 
+                            color: isActive ? 'greenyellow' : 'white' })}>
+                             Search Products
+                        </NavLink>
+                    </div>
+
+                    <div style={{ margin: '10px' }}>
                         <NavLink to="/contact" style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'white' })}>
                             Contact Us.
@@ -82,13 +103,16 @@ export default function Topbar()
                     </div>
                 </div>
                 <Routes>
+                    <Route path="/productdetail/:id" element={<Fproductdetail/>} />
                     <Route exact path="/home" element={<Home />} />
                     <Route exact path="/about" element={<About />} />
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/user" element={<User />} />
                     <Route exact path="/fproduct" element={<Fproduct />} />
                     <Route exact path="/mproduct" element={<Mproduct />} />
+                    <Route exact path="/sproduct" element={<Sproduct />} />
                     <Route exact path="/contact" element={<Contact />} />
+                    <Route exact path="/article" element={<Article />} />
                 </Routes>
             </BrowserRouter>
     </>
