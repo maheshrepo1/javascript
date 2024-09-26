@@ -19,7 +19,7 @@ function* getArticle(){
 }
 
 function* productSaga(){
-    console.log('first call');
+    console.warn("first action called step 3");
     yield takeEvery(PRODUCT_SAGA_CALL, getProducts)
 }
 

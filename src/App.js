@@ -4,6 +4,11 @@ import { productList } from './redux/action/productAction';
 import {useDispatch,useSelector} from 'react-redux';
 import  './App.css';
 import { useEffect } from "react";
+import Item from "./components/context/item";
+import Cart from "./components/context/Cart";
+import { CartProvider } from "./context/Cart";
+
+
 
 function App() {
 
@@ -14,7 +19,22 @@ function App() {
      
 
       let data = useSelector((state)=>state.productData);
-      return(<><div style={{width:"1100px",backgroundColor:"#",border:"1px solid"}} > <div>
+      return(<>
+        
+        <div> 
+          <CartProvider>
+          
+          <Item name='Mac Book Pro' price={1000}  /> 
+          <Item name='Pendrive' price={1000}  /> 
+          <Item name='Mouse' price={100}  /> 
+          <Item name='Monitor' price={5000}  /> 
+          <Cart/>
+
+          </CartProvider>
+        
+        </div>
+      
+      <div style={{width:"1100px",backgroundColor:"#",border:"1px solid"}} > <div>
          <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>  <button onClick={() => dispatch(productList())}>Call Product List</button> </div>
         </div>  
       <Home/>

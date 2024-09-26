@@ -14,8 +14,6 @@ import Fproductdetail from "../../pages/fproductdetail/fproductdetail";
 //import Article from "../../pages/article/article";
 import Article from "../../pages/article/articletest";
 
-
- 
 export default function Topbar()
 {  
     const dispatch = useDispatch();
