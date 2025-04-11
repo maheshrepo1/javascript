@@ -1,6 +1,5 @@
 import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART } from "../constant"
 
-
 export const cartData = (data = [], action) => {
     switch (action.type) {
         case ADD_TO_CART:
@@ -22,3 +21,4 @@ export const cartData = (data = [], action) => {
                     return data
     }
 }
+

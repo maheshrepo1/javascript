@@ -1,0 +1,44 @@
+.container {
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 11px;
+    width: auto;
+    height: auto;
+    margin: 16px;
+}
+
+.headertitle {
+    padding: 2px;
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.fieldset {
+    display: flex;
+    border: 0px solid red;
+    margin-bottom: 16px;
+}
+
+.labelbox {
+    width: 20%;
+    margin-right: '20px';
+    justify-content: space-between;
+    gap: 16px;
+    
+    
+}
+
+.buttonbox
+{ 
+  padding: 15px 15px 15px 15px;
+  margin: 5px 5px 5px 0;
+  border-radius: 4px;
+
+}
+
+.validationerror{
+  color: red;
+  font-size: 10px;
+}
