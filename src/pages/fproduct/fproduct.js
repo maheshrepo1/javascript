@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector} from "react-redux";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
+
+//  
 const Fproduct = ()=>{
 
    const[getData,setData]  = useState();
@@ -76,11 +79,18 @@ const Fproduct = ()=>{
                   setSearch(event.target.value);
              } } />   {getSearch} </td> </tr>
              <tr><td> Name</td><td> Color </td> <td> Price </td> </tr>
-             {getData ? getData.map((item)=>
+             {getData ? getData.map((item)=>( <>
 
-                 <tr><td> {item.name} </td><td> {item.color} </td> <td> {item.price} </td> </tr>
+                 <tr><td> {item.name} </td><td> {item.color} </td> <td> {item.price} </td> <td> <Link to={`/productdetail/${item.id}`}>View details</Link>
+                  </td>  </tr>
+                
 
-             ):''}
+                 </>
+
+             )):''}
+
+
+             
 
              </table>
               
